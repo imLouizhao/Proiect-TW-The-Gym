@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>THE GYM Website</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <script src="script.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div style="min-width: 960px; margin: 0 auto;">
+        <section class="header">
+                <nav>
+                    <a href="index.html"><img src="images/logo.jpg" alt=""></a>
+                    <div class="nav-links">
+                        <ul>
+                            <li><a href="#abonamente">ABONAMENTE</a></li>
+                            <li><a href="#despre">DESPRE</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="text-box">
+                    <h1>Cea mai mare sală din Militari</h1>
+                    <p>Aparate de ultimă generație cu peste 2000mp, dotat cu ring de MMA si saună.</p>
+                </div>
+        </section>
+    </div>
+
+<!-- Abonamente -->
+
+<section class="abonamente" id="abonamente">
+    <h1 id="Tipuri_de_abonamente" onclick="modifyColor()">Tipuri de abonamente</h1>
+    <p id="p1-s"><input type="checkbox" id="checkbox1"></input>SILVER</p>
+    <p class="p2">Interval orar: 08:00 - 17:00</p>
+    <p class="p2">Tarif: 180 lei / lună</p>
+    <p class="p2">Servicii: Fitness, Saună umedă, Saună uscată</p>
+    <p id="p1-g"><input type="checkbox" id="checkbox2"></input>GOLD</p>
+    <p class="p2">Interval orar: NON STOP</p>
+    <p class="p2">Tarif: 250 lei / lună</p>
+    <p class="p2">Servicii: Fitness, Cardio, Aerobic, Saună umedă, Saună uscată</p>
+</section>
+
+
+<!-- Despre -->
+
+<section class="despre" id="despre">
+    <h1>Despre noi</h1>
+    <p class="p2">THE GYM reprezintă cea mai mare sală de fitness din cartierul Militari cu program NON STOP</p>
+    <button id="buton" class="buton green" onclick=showDetails()>Mai multe detalii</button>
+    <!--
+    <p class="p2">Aparate de ultimă generație, atent alese, fabricate in S.U.A.</p>
+    <p class="p2">Ring octagonal de MMA</p>
+    <p class="p2">Spațiu de 2000mp amenajat corespunzător</p>
+    <p class="p2">Sală de aerobic cu suprafață de 250mp</p>
+    <p class="p2">2 zone SPA prezente în vestiare</p>
+    <p class="p2">Program NON STOP cu personal prezent în recepție</p>
+    <p class="p2">Opțiuni variate pentru antrenori personali</p>
+    -->
+</section>
+
+<script>
+    var input = document.body;
+    input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            setTimeout(showDetails, 1000);
+        }
+        else if (event.key === " ") {
+            event.preventDefault();
+            alert(document.getElementById("buton").classList);
+        }
+    });
+    const c = document.createElement("checkbox");
+    c.className = "check";
+    document.getElementById("p1-s").appendChild(c);
+</script>
+
+
+<!-- Contact -->
+
+<section class="contact" id="contact">
+    <h1>Contact</h1>
+    <p class="p4">Numar de telefon: 0799 676 767</p>
+    <p class="p4">Adresă mail: thegymfitness@gmail.com</p>
+    <p class="p4">Adresă: Drumul Osiei nr.52, Bucuresti, 062395</p>
+</section>
+
+    </body>
+</html>
